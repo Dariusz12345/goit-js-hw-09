@@ -8,6 +8,7 @@ stopButton.addEventListener('click', onStop);
 function onStart() {
   // Dezaktywuj przycisk "Start"
   startButton.disabled = true;
+  stopButton.disabled = false;
   
   // Uruchom interwał zmiany koloru
   intervalId = setInterval(() => {
@@ -19,6 +20,7 @@ function onStop() {
   // Zatrzymaj interwał i aktywuj przycisk "Start"
   clearInterval(intervalId);
   startButton.disabled = false;
+  stopButton.disabled = true;
 }
 
 function getRandomHexColor() {  
